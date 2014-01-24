@@ -1,0 +1,11 @@
+<?php $testimonialList = Model_Testimonial::getInstance()->getAll();?>
+
+<?php if(empty($testimonialList)) : ?>
+  <p class="alert alert-info"><?php echo Model_Constant::LANG_NO_TESTIMONIALS_AVAILABLE;?></p>
+<?php else : ?>
+  <hr/>
+  <?php foreach($testimonialList as $testimonial) : ?>
+      <?php echo Application_View::getInstance()->partial('testimonial_single.phtml', array('testimonial' => $testimonial))?>
+      <hr/>
+  <?php endforeach;?>
+<?php endif;?>

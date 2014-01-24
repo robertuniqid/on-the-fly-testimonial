@@ -1,0 +1,107 @@
+<div class="jumbotron" style="background: #3498db;margin:0;">
+  <div class="container">
+    <h2>Setup Steps : </h2>
+
+    <h3>0. Scrolling Down will get you past the documentation</h3>
+    <h3>I. Download the script</h3>
+    <h3>II. Unzip the script</h3>
+    <h3>III. Changing the name & customizing & translation ( if necessary )</h3>
+    <div class="row">
+      <div class="col-11 col-sm-11 col-md-11 col-offset-1 col-sm-offset-1 col-md-offset-1">
+        <div class="row">
+          <h4>1. Changing the name</h4>
+          <div class="col-11 col-sm-11 col-md-11 col-offset-1 col-sm-offset-1 col-md-offset-1">
+            <p>Go to the following file</p>
+            <div class="well">
+              <code>
+                application/models/Constant.php
+              </code>
+            </div>
+
+            <p>Edit the following line with the name you want this script to have</p>
+
+            <div class="well">
+              <code>
+                const SCRIPT_NAME = 'On The Fly Testimonial';
+              </code>
+            </div>
+          </div>
+          <h4>2. Translation</h4>
+          <div class="col-11 col-sm-11 col-md-11 col-offset-1 col-sm-offset-1 col-md-offset-1">
+            <p>Go to the following file</p>
+            <div class="well">
+              <code>
+                application/models/Constant.php
+              </code>
+            </div>
+
+            <p>Edit all the CONST LANG variables, everything displayed can be edited there.</p>
+          </div>
+          <h4>3. Remove the documentation from this page.</h4>
+          <div class="row">
+            <p>Go to the following file</p>
+            <div class="well">
+              <code>
+                application/models/Constant.php
+              </code>
+            </div>
+            <p>Set this to false</p>
+            <div class="col-11 col-sm-11 col-md-11 col-offset-1 col-sm-offset-1 col-md-offset-1">
+              const SHOW_DOCUMENTATION         = true;
+            </div>
+          </div>
+          <h4>4. <span class="label label-danger">HTML</span> <span class="label label-success">Optional</span> Creating the page</h4>
+          <div class="row">
+            <div class="col-11 col-sm-11 col-md-11 col-offset-1 col-sm-offset-1 col-md-offset-1">
+              <p>- Go to the following file</p>
+              <div class="well">
+                <code>
+                  application/views/index.phtml
+                </code>
+              </div>
+              <p class="alert alert-warning">! If you know HTML or you want to make a page with more rather than the testimonial system, skip this step. and go to : 5. Customizing the page ( Optional ) </p>
+              <p>- Remove all the content</p>
+              <p>- Copy Paste the following code inside the index.phtml file.</p>
+              <div class="well">
+                <code>
+                  &lt;?php echo Application_View::getInstance()-&gt;partial('testimonials.phtml');?&gt;
+                </code>
+                <code>
+                  &lt;?php echo Application_View::getInstance()-&gt;partial('testimonial_add.phtml');?&gt;
+                </code>
+              </div>
+            </div>
+          </div>
+          <h4>5. <span class="label label-danger">HTML</span> <span class="label label-success">Optional</span> Customizing the page</h4>
+          <div class="row">
+            <div class="col-11 col-sm-11 col-md-11 col-offset-1 col-sm-offset-1 col-md-offset-1">
+              <p>- Go to the following file</p>
+              <div class="well">
+                <code>
+                  application/views/index.phtml
+                </code>
+              </div>
+              <p>- Remove everything you don't need.</p>
+              <p>- Add any text you want to display on this page.</p>
+              <p>- Adding the components to the page</p>
+              <p> * Testimonial List : </p>
+              <div class="well">
+                <code>
+                  &lt;?php echo Application_View::getInstance()-&gt;partial('testimonials.phtml');?&gt;
+                </code>
+              </div>
+              <p> * Testimonial Add : </p>
+              <div class="well">
+                <code>
+                  &lt;?php echo Application_View::getInstance()-&gt;partial('testimonial_add.phtml');?&gt;
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>IV. Upload this directory to it's destination</h3>
+    <h3>V. Enjoy</h3>
+  </div>
+</div>

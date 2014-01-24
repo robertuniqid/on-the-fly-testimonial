@@ -1,0 +1,29 @@
+<div class="row">
+  <form data-component="testimonial-add" class="testimonial_form">
+    <div class="leftSide col-md-3 col-sm-3 col-xs-5">
+      <figure>
+        <img src="<?php echo Model_Constant::DEFAULT_TESTIMONIAL_IMAGE;?>" style="width:100%;position: relative"/>
+        <div class="ct" style="width:140px;margin:0 auto;position:relative;bottom:28px;">
+          <input id="new-picture-upload-<?php echo rand(500, 1000);?>" type="file" name="pictureUpload" class="pictureUpload"/>
+        </div>
+      </figure>
+
+      <input type="hidden" class="image_hidden_input" name="testimonial[image]" value="<?php echo Model_Constant::DEFAULT_TESTIMONIAL_IMAGE;?>"/>
+      <p><input type="text" name="testimonial[image_subline]" placeholder="<?php echo Model_Constant::LANG_TESTIMONIAL_LABEL_ORGANIZATION_NAME;?>" class="form-control"/></p>
+      <p><input type="text" name="testimonial[image_subline_link]" placeholder="<?php echo Model_Constant::LANG_TESTIMONIAL_LABEL_ORGANIZATION_WEBSITE;?>" class="form-control"/></p>
+    </div>
+    <div class="rightSide col-md-9  col-sm-9 col-xs-7">
+      <p><input type="text" name="testimonial[name]" placeholder="<?php echo Model_Constant::LANG_TESTIMONIAL_LABEL_NAME;?>" class="form-control"/></p>
+      <div>
+        <textarea name="testimonial[content]" placeholder="<?php echo Model_Constant::LANG_TESTIMONIAL_LABEL_TESTIMONIAL;?>" class="form-control"></textarea>
+      </div>
+      <div>
+        <?php if(Model_Constant::DISABLED_TESTIMONIAL_ADD != true) : ?>
+          <input type="submit" name="submit" value="<?php echo Model_Constant::LANG_TESTIMONIAL_LABEL_SEND;?> &raquo" class="btn btn-lg btn-success">
+        <?php else : ?>
+          <p class="alert alert-danger"><?php echo Model_Constant::LANG_DISABLED_TESTIMONIAL_ADD;?></p>
+        <?php endif;?>
+      </div>
+    </div>
+  </form>
+</div>

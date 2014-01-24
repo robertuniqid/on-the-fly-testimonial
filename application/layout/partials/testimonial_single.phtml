@@ -1,0 +1,25 @@
+<div class="row">
+  <form class="testimonial_form">
+    <div class="leftSide col-md-3 col-sm-3 col-xs-5">
+      <figure>
+        <img src="<?php echo $testimonial['image']?>" style="width:100%;"/>
+      </figure>
+      <input type="hidden" name="testimonial[image]" value="<?php echo Model_Constant::DEFAULT_TESTIMONIAL_IMAGE;?>"/>
+      <p class="text-center">
+        <?php if($testimonial['image_subline_link'] != '') : ?>
+          <?php echo $testimonial['image_subline']?>
+        <?php else : ?>
+          <a href="<?php echo $testimonial['image_subline_link']?>">
+            <?php echo $testimonial['image_subline']?>
+          </a>
+        <?php endif;?>
+      </p>
+    </div>
+    <div class="rightSide col-md-9  col-sm-9 col-xs-7">
+      <p><?php echo $testimonial['name']?></p>
+      <div>
+        <?php echo str_replace("\n", "<br/>", $testimonial["content"]);?>
+      </div>
+    </div>
+  </form>
+</div>

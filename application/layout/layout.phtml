@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><?php echo isset($title) ? $title : Model_Constant::SCRIPT_NAME;?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le javascript -->
+    <script src="assets/scripts/jquery-1.7.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/ajax_core.js"></script>
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Uploadify -->
+    <link href="assets/uploadify/uploadify.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="assets/uploadify/jquery.uploadify.min.js"></script>
+
+    <!-- Layout Helper -->
+    <script src="assets/scripts/layout_helper/layout_helper.js"></script>
+    <script src="assets/scripts/layout_helper/layout_helper_switcher.js"></script>
+
+    <!-- Application Files -->
+    <script src="assets/scripts/component.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        LayoutHelper.Init();
+        Component.Init();
+      });
+    </script>
+
+    <style type="text/css">
+        body {
+          background: #ecf0f1;
+        }
+        .left {
+          float: left;
+          display: block;
+        }
+
+        .right {
+          float: right;
+          display: block;
+        }
+
+        .clear {
+          clear:both;
+          content: "";
+          visibility: hidden;
+          border: 0;
+          padding: 0;
+          margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+  <?php echo isset($layout_main_content) ? $layout_main_content : '';?>
+
+</body>
+</html>

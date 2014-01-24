@@ -1,0 +1,31 @@
+<?php if(Model_Constant::SHOW_DOCUMENTATION == true) : ?>
+  <?php echo Application_View::getInstance()->partial('documentation.phtml');?>
+<?php endif;?>
+
+<div class="jumbotron" style="background: #3498db;margin:0;">
+  <div class="container">
+    <h1 style="color:#FFFFFF;" class="text-center">
+      <?php echo Model_Constant::SCRIPT_NAME;?>
+    </h1>
+  </div>
+</div>
+
+
+<div class="jumbotron" style="background: #2ecc71;margin:0;color:#FFFFFF;">
+  <div class="container">
+    <h2 class="text-center" style="color:#FFFFFF;">Responsive On The Fly Testimonial System</h2>
+    <h2 class="text-center" style="color:#FFFFFF;">Fully Customizable</h2>
+
+    <br/>
+
+    <?php echo Application_View::getInstance()->partial('testimonials.phtml');?>
+  </div>
+</div>
+
+<div class="jumbotron" style="background: #e67e22;margin:0;color:#FFFFFF;">
+  <div class="container">
+    <h2 style="color:#ffffff;">Add Your Testimonial</h2>
+    <hr/>
+    <?php echo Application_View::getInstance()->partial('testimonial_add.phtml');?>
+  </div>
+</div>
