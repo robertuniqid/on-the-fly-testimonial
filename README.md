@@ -1,6 +1,8 @@
 on-the-fly-testimonial
 ======================
 
+Preview : http://demonstration.easy-development.com/on-the-fly-testimonial/
+
 On the Fly Testimonial. 
 
 Add a PHP Testimonial System anywhere in under 1 minute
